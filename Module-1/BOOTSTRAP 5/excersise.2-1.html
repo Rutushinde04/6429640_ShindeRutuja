@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap Structure Demo</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h2 class="text-primary mb-4">Bootstrap Folder Structure</h2>
+
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card border-primary">
+          <div class="card-body">
+            <h5 class="card-title text-primary">📁 css/</h5>
+            <p class="card-text">
+              Contains Bootstrap's core stylesheets.<br/>
+              <code>bootstrap.min.css</code> is used for production.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <div class="card border-success">
+          <div class="card-body">
+            <h5 class="card-title text-success">📁 js/</h5>
+            <p class="card-text">
+              Contains JavaScript plugins and utilities.<br/>
+              Use <code>bootstrap.bundle.min.js</code> for components like modals and tooltips.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <div class="card border-warning">
+          <div class="card-body">
+            <h5 class="card-title text-warning">📁 icons/</h5>
+            <p class="card-text">
+              Optional folder for Bootstrap Icons.<br/>
+              Use icons by including <code>bootstrap-icons.css</code>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

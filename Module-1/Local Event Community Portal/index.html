@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Community Event Portal</title>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    /* Internal Styles */
+    body {
+      background: #f5f5f5;
+      font-family: 'Roboto', sans-serif;
+    }
+    #welcomeBanner {
+      background-color: #27e096;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="help.html" target="_blank">Help</a></li>
+    </ul>
+  </nav>
+
+  <!-- Welcome Section -->
+  <section id="home">
+    <div id="welcomeBanner">
+      <h1>Welcome to Your Community!!</h1>
+      <span style="color:red; font-weight:bold">Special Offer: Free Entry to First 250 Registrants!</span>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events">
+    <h2>Upcoming Events</h2>
+    <div class="eventCard" id="eventList"></div>
+
+    <!-- Event Gallery -->
+    <table>
+      <caption>Previous Event Highlights</caption>
+      <tr>
+        <img src="images/event1.jpg" class="gallery" alt="Music Night" title="Music Night">
+        <td><img src="images/event2.jpg" class="gallery" alt="Yoga Workshop" title="Yoga Workshop"></td>
+        <td><img src="images/event3.jpg" class="gallery" alt="Art Fest" title="Art Fest"></td>
+      </tr>
+      <tr>
+        <td><img src="images/event4.jpg" class="gallery" alt="Food Carnival" title="Food Carnival"></td>
+        <td><img src="images/event5.jpg" class="gallery" alt="Tech Meetup" title="Tech Meetup"></td>
+        <td><img src="images/event6.jpg" class="gallery" alt="Charity Run" title="Charity Run"></td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Registration Form -->
+  <section id="register">
+    <h2>Register for an Event</h2>
+    <form id="registrationForm">
+      <label>Name: <input type="text" name="name" placeholder="Enter your name" required autofocus></label><br>
+      <label>Email: <input type="email" name="email" placeholder="you@example.com" required></label><br>
+      <label>Date: <input type="date" name="date" required></label><br>
+      <label>Event Type:
+        <select name="eventType" id="eventType">
+          <option value="music">Music</option>
+          <option value="workshop">Workshop</option>
+          <option value="sports">Sports</option>
+        </select>
+      </label><br>
+      <label>Message: <textarea name="message" onkeydown="countChars(event)"></textarea></label><br>
+      <label>Phone: <input type="tel" id="phone" onblur="validatePhone()"></label><br>
+      <input type="submit" value="Register" onclick="submitForm(event)">
+      <output id="confirmation"></output>
+    </form>
+  </section>
+
+  <!-- Video Invite -->
+  <section>
+    <video id="promo" controls oncanplay="showVideoMsg()">
+      <source src="promo.mp4" type="video/mp4">
+    </video>
+    <p id="videoMsg"></p>
+  </section>
+
+  <!-- Geolocation -->
+  <section>
+    <button onclick="findNearbyEvents()">Find Nearby Events</button>
+    <p id="location"></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Local Community Portal</p>
+    <button onclick="clearPrefs()">Clear Preferences</button>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>
